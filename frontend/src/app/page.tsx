@@ -18,7 +18,7 @@ export default function AdversarialLab() {
 
     try {
       // Replace with your AWS URL later for Part 3
-      const response = await fetch('https://c2pr5n76ms5f234jfqfe3xnvvu0muuhi.lambda-url.ap-southeast-2.on.aws/', {
+      const response = await fetch('https://c2pr5n76ms5f234jfqfe3xnvvu0muuhi.lambda-url.ap-southeast-2.on.aws/attack', {
         method: 'POST',
         body: formData,
       });

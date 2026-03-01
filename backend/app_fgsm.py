@@ -7,9 +7,9 @@ from torchvision import transforms
 from PIL import Image
 import io
 import base64
-
+from mangum import Mangum
 # Import your Attack class from fgsm.py
-from backend.fgsm import Attack
+from fgsm import Attack
 
 # 1. Define the EXACT same model architecture used in training
 class Net(torch.nn.Module):
@@ -104,3 +104,4 @@ async def perform_attack(
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
 
+handler = Mangum(app)
