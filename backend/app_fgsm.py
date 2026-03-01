@@ -32,14 +32,7 @@ class Net(torch.nn.Module):
 
 app = FastAPI()
 
-# 2. Add CORS Middleware (Crucial for Next.js to communicate with API)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"], 
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 # 3. Load Model and Attacker
 device = torch.device('cpu')
