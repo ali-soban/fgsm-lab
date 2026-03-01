@@ -9,7 +9,7 @@ import io
 import base64
 
 # Import your Attack class from fgsm.py
-from fgsm import Attack
+from backend.fgsm import Attack
 
 # 1. Define the EXACT same model architecture used in training
 class Net(torch.nn.Module):
