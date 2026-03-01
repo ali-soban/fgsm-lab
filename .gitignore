@@ -1,0 +1,12 @@
+# Node dependencies
+frontend/node_modules/
+frontend/.next/
+
+# Python dependencies
+backend/__pycache__/
+backend/venv/
+backend/*.pth
+
+# OS files
+.DS_Store
+Thumb.db
