@@ -45,10 +45,10 @@ app.add_middleware(
 device = torch.device('cpu')
 model = Net()
 try:
-    model.load_state_dict(torch.load("mnist_model.pth", map_location=device))
+    model.load_state_dict(torch.load("mnist_model.bin", map_location=device))
     print("Model loaded successfully.")
 except FileNotFoundError:
-    print("Warning: mnist_model.pth not found. Run evaluation script first!")
+    print("Warning: mnist_model.bin not found. Run evaluation script first!")
 
 model.eval()
 attacker = Attack(model)

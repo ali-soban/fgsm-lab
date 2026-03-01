@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your backend code and the trained model
-COPY app_fgsm.py fgsm.py mnist_model.pth ./
+COPY app_fgsm.py fgsm.py mnist_model.bin ./
 
 # Set the CMD to your handler (file_name.handler_name)
 # Since we added 'handler = Mangum(app)' in app_fgsm.py:

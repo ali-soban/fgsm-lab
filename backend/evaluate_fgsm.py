@@ -124,7 +124,7 @@ if __name__ == "__main__":
     print("Training model for 1 epoch to establish baseline...")
     train_model(model, device, train_loader, optimizer, 1)
 
-    torch.save(model.state_dict(), "mnist_model.pth")
-    print("Model saved as mnist_model.pth")
+    torch.save(model.state_dict(), "mnist_model.bin")
+    print("Model saved as mnist_model.bin")
 
     evaluate_robustness(model, device, test_loader, eps)
