@@ -20,7 +20,14 @@ The system allows users to upload handwritten digits (MNIST), apply varying leve
 
 ![Front end Results](frontend-prediction-2.png)
 
+## FGSM
 
+FGSM is basically a way of fooling a NN. As we know, models rely on gradient changes to minimize losses, FGSM basically checks the gradient and maximises loss (Gradient Ascent), to make the model less sure about its prediction and confuse it. This causes the model's confidence scores to go down and it can make wrong predictions.
+
+Now, regarding the epsilon. It can be seen as a multiplier of the effort put in by the attack. The higher the epsilon, the bugger changes made by the attack hence more chances of a wrong prediction.
+
+Frontend: [here](https://main.dl44zsolx0rq1.amplifyapp.com/)
+Backend: [here](https://c2pr5n76ms5f234jfqfe3xnvvu0muuhi.lambda-url.ap-southeast-2.on.aws/)
 
 ---
 
